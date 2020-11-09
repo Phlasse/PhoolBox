@@ -1,0 +1,3 @@
+graft PhoolBox
+global-exclude *.py[cod] __pycache__ *.so *.ipynb
+recursive-exclude  PhoolBox/jupy *
