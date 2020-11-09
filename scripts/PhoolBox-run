@@ -9,19 +9,20 @@ import pandas as pd
 # Import from PhoolBox
 import PhoolBox
 from PhoolBox.lib import clean_data
+from PhoolBox.PrePhooling import num_split
 
 if __name__ == '__main__':
     usage = '%(prog)s'
     description = 'PhoolBox_description'
     # https://docs.python.org/3/library/argparse.html
     # https://docs.python.org/3/howto/argparse.html
-    parser = argparse.ArgumentParser(description=description, usage=usage)
-    args = parser.parse_args()
-    folder_source, _ = split(PhoolBox.__file__)
-    df = pd.read_csv('{}/data/data.csv.gz'.format(folder_source))
-    print('  PhoolBox/data/data.csv.gz Loaded')
-
-    res = clean_data(df)
-    res.to_csv('out.csv', index=False)
-    print('==> out.csv MADE ')
-    print('    shape is {}'.format(res.shape))
+    #parser = argparse.ArgumentParser(description=description, usage=usage)
+    #args = parser.parse_args()
+    #folder_source, _ = split(PhoolBox.__file__)
+    #df = pd.read_csv('{}/data/data.csv.gz'.format(folder_source))
+    #print('  PhoolBox/data/data.csv.gz Loaded')
+    num_split()
+    #res = clean_data(df)
+    #res.to_csv('out.csv', index=False)
+    #print('==> out.csv MADE ')
+    #print('    shape is {}'.format(res.shape))
